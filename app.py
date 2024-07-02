@@ -2,8 +2,8 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-car1 = {"number": "123-456", "problems": []}
-car2 = {"number": "456-789", "problems": []}
+car1 = {"number": "123-456", "problems": [],"image": "https://picsum.photos/id/133/20/30"}
+car2 = {"number": "456-789", "problems": [],"image": "https://picsum.photos/id/133/20/30"}
 cars = [car1, car2]
 
 
