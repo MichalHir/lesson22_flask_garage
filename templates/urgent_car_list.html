@@ -49,11 +49,11 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="http://127.0.0.1:9000/">All cars</a></li>
-          <li><a href="http://127.0.0.1:9000/urgent/">All urgent cars</a></li>
-          <li><a href="http://127.0.0.1:9000/add_urgent/">Add urgent cars</a></li>
-          <li><a href="http://127.0.0.1:9000/prices/">Prices</a></li>
-          <li><a href="http://127.0.0.1:9000/add_car/">Add your car</a></li>
+            <li class="active"><a href="http://127.0.0.1:9000/">All cars</a></li>
+            <li><a href="http://127.0.0.1:9000/urgent/">All urgent cars</a></li>
+            <li><a href="http://127.0.0.1:9000/add_urgent/">Add urgent car</a></li>
+            <li><a href="http://127.0.0.1:9000/prices/">Prices</a></li>
+            <li><a href="http://127.0.0.1:9000/add_car/">Add your car</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
@@ -66,6 +66,7 @@
   <div class="container">
     <div class="row">
       {% for car in car_list %}
+      {% if car.if_urgent%}
       <a href="/single_car/{{ car.id }}">
         <div class="col-sm-4">
           <div class="panel panel-primary">
@@ -78,6 +79,7 @@
           </div>
         </div>
       </a>
+      {%endif%}
       {% endfor %}
     </div>
   </div>

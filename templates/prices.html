@@ -1,0 +1,11 @@
+{% for price in prices%}
+<p>the cost of {{price[0]}} is {{price[1]}}</p>
+{% endfor %}
+
+<button
+  type="button"
+  class="btn btn-outline-primary"
+  onclick="window.location.href='http://127.0.0.1:9000/';"
+>
+  Back to homepage
+</button>
